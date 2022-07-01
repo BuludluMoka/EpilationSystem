@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EpilationDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbladmin">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kullanici" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblcustomer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustFirstName" Type="varchar" MaxLength="35" />
+          <Property Name="CustLastName" Type="varchar" MaxLength="35" />
+          <Property Name="CustPhoneNumber" Type="varchar" MaxLength="20" />
+          <Property Name="CustStreet" Type="varchar" MaxLength="35" />
+          <Property Name="CustGender" Type="varchar" MaxLength="1" />
+          <Property Name="Durumu" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblemployee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceID" Type="int" Nullable="false" />
+          <Property Name="EmpFirstName" Type="varchar" MaxLength="35" />
+          <Property Name="EmpLastName" Type="varchar" MaxLength="25" />
+          <Property Name="EmpPhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="EmpStreet" Type="varchar" MaxLength="45" />
+          <Property Name="Salary" Type="int" />
+          <Property Name="JobDesc" Type="nvarchar" MaxLength="50" />
+          <Property Name="Durumu" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblservicerendered">
+          <Key>
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="AppointmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="ServiceExtendedPrice" Type="smallmoney" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblservices">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceName" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="ServicePrice" Type="smallmoney" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_ServiceRendered_Employee">
+          <End Role="tblemployee" Type="Self.tblemployee" Multiplicity="1" />
+          <End Role="tblservicerendered" Type="Self.tblservicerendered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblemployee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="tblservicerendered">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblemployee_tblservices">
+          <End Role="tblservices" Type="Self.tblservices" Multiplicity="1" />
+          <End Role="tblemployee" Type="Self.tblemployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblservices">
+              <PropertyRef Name="ServiceID" />
+            </Principal>
+            <Dependent Role="tblemployee">
+              <PropertyRef Name="ServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblservicerendered_tblcustomer">
+          <End Role="tblcustomer" Type="Self.tblcustomer" Multiplicity="1" />
+          <End Role="tblservicerendered" Type="Self.tblservicerendered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblcustomer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="tblservicerendered">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EpilationDbModelStoreContainer">
+          <EntitySet Name="tbladmin" EntityType="Self.tbladmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblcustomer" EntityType="Self.tblcustomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblemployee" EntityType="Self.tblemployee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblservicerendered" EntityType="Self.tblservicerendered" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblservices" EntityType="Self.tblservices" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_ServiceRendered_Employee" Association="Self.fk_ServiceRendered_Employee">
+            <End Role="tblemployee" EntitySet="tblemployee" />
+            <End Role="tblservicerendered" EntitySet="tblservicerendered" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblemployee_tblservices" Association="Self.FK_tblemployee_tblservices">
+            <End Role="tblservices" EntitySet="tblservices" />
+            <End Role="tblemployee" EntitySet="tblemployee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblservicerendered_tblcustomer" Association="Self.FK_tblservicerendered_tblcustomer">
+            <End Role="tblcustomer" EntitySet="tblcustomer" />
+            <End Role="tblservicerendered" EntitySet="tblservicerendered" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EpilationDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbladmin">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kullanici" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sifre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblcustomer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustFirstName" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="CustLastName" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="CustPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CustStreet" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="CustGender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblservicerendereds" Relationship="Self.FK_tblservicerendered_tblcustomer" FromRole="tblcustomer" ToRole="tblservicerendered" />
+          <Property Name="Durumu" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tblemployee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceID" Type="Int32" Nullable="false" />
+          <Property Name="EmpFirstName" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="EmpLastName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="EmpPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EmpStreet" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Salary" Type="Int32" />
+          <NavigationProperty Name="tblservicerendereds" Relationship="Self.fk_ServiceRendered_Employee" FromRole="tblemployee" ToRole="tblservicerendered" />
+          <NavigationProperty Name="tblservice" Relationship="Self.FK_tblemployee_tblservices" FromRole="tblemployee" ToRole="tblservices" />
+          <Property Name="Durumu" Type="Boolean" />
+          <Property Name="JobDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblservicerendered">
+          <Key>
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="AppointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ServiceExtendedPrice" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblcustomer" Relationship="Self.FK_tblservicerendered_tblcustomer" FromRole="tblservicerendered" ToRole="tblcustomer" />
+          <NavigationProperty Name="tblemployee" Relationship="Self.fk_ServiceRendered_Employee" FromRole="tblservicerendered" ToRole="tblemployee" />
+        </EntityType>
+        <EntityType Name="tblservice">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceName" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ServicePrice" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <NavigationProperty Name="tblemployees" Relationship="Self.FK_tblemployee_tblservices" FromRole="tblservices" ToRole="tblemployee" />
+        </EntityType>
+        <Association Name="FK_tblservicerendered_tblcustomer">
+          <End Role="tblcustomer" Type="Self.tblcustomer" Multiplicity="1" />
+          <End Role="tblservicerendered" Type="Self.tblservicerendered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblcustomer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="tblservicerendered">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ServiceRendered_Employee">
+          <End Role="tblemployee" Type="Self.tblemployee" Multiplicity="1" />
+          <End Role="tblservicerendered" Type="Self.tblservicerendered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblemployee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="tblservicerendered">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblemployee_tblservices">
+          <End Role="tblservices" Type="Self.tblservice" Multiplicity="1" />
+          <End Role="tblemployee" Type="Self.tblemployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblservices">
+              <PropertyRef Name="ServiceID" />
+            </Principal>
+            <Dependent Role="tblemployee">
+              <PropertyRef Name="ServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EpilationDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbladmins" EntityType="Self.tbladmin" />
+          <EntitySet Name="tblcustomers" EntityType="Self.tblcustomer" />
+          <EntitySet Name="tblemployees" EntityType="Self.tblemployee" />
+          <EntitySet Name="tblservicerendereds" EntityType="Self.tblservicerendered" />
+          <EntitySet Name="tblservices" EntityType="Self.tblservice" />
+          <AssociationSet Name="FK_tblservicerendered_tblcustomer" Association="Self.FK_tblservicerendered_tblcustomer">
+            <End Role="tblcustomer" EntitySet="tblcustomers" />
+            <End Role="tblservicerendered" EntitySet="tblservicerendereds" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ServiceRendered_Employee" Association="Self.fk_ServiceRendered_Employee">
+            <End Role="tblemployee" EntitySet="tblemployees" />
+            <End Role="tblservicerendered" EntitySet="tblservicerendereds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblemployee_tblservices" Association="Self.FK_tblemployee_tblservices">
+            <End Role="tblservices" EntitySet="tblservices" />
+            <End Role="tblemployee" EntitySet="tblemployees" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EpilationDbModelStoreContainer" CdmEntityContainer="EpilationDbEntities">
+          <EntitySetMapping Name="tbladmins">
+            <EntityTypeMapping TypeName="EpilationDbModel.tbladmin">
+              <MappingFragment StoreEntitySet="tbladmin">
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblcustomers">
+            <EntityTypeMapping TypeName="EpilationDbModel.tblcustomer">
+              <MappingFragment StoreEntitySet="tblcustomer">
+                <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustFirstName" ColumnName="CustFirstName" />
+                <ScalarProperty Name="CustLastName" ColumnName="CustLastName" />
+                <ScalarProperty Name="CustPhoneNumber" ColumnName="CustPhoneNumber" />
+                <ScalarProperty Name="CustStreet" ColumnName="CustStreet" />
+                <ScalarProperty Name="CustGender" ColumnName="CustGender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblemployees">
+            <EntityTypeMapping TypeName="EpilationDbModel.tblemployee">
+              <MappingFragment StoreEntitySet="tblemployee">
+                <ScalarProperty Name="JobDesc" ColumnName="JobDesc" />
+                <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="EmpFirstName" ColumnName="EmpFirstName" />
+                <ScalarProperty Name="EmpLastName" ColumnName="EmpLastName" />
+                <ScalarProperty Name="EmpPhoneNumber" ColumnName="EmpPhoneNumber" />
+                <ScalarProperty Name="EmpStreet" ColumnName="EmpStreet" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblservicerendereds">
+            <EntityTypeMapping TypeName="EpilationDbModel.tblservicerendered">
+              <MappingFragment StoreEntitySet="tblservicerendered">
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ServiceExtendedPrice" ColumnName="ServiceExtendedPrice" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblservices">
+            <EntityTypeMapping TypeName="EpilationDbModel.tblservice">
+              <MappingFragment StoreEntitySet="tblservices">
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="ServicePrice" ColumnName="ServicePrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
