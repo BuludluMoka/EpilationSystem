@@ -98,7 +98,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(53, 248);
+            this.labelControl7.Location = new System.Drawing.Point(58, 242);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(46, 16);
@@ -107,7 +107,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(59, 208);
+            this.labelControl5.Location = new System.Drawing.Point(64, 202);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(40, 16);
@@ -119,12 +119,12 @@
             this.txtStreet.Location = new System.Drawing.Point(129, 199);
             this.txtStreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStreet.Name = "txtStreet";
-            this.txtStreet.Size = new System.Drawing.Size(219, 34);
+            this.txtStreet.Size = new System.Drawing.Size(219, 22);
             this.txtStreet.TabIndex = 12;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(49, 169);
+            this.labelControl4.Location = new System.Drawing.Point(54, 163);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(50, 16);
@@ -136,12 +136,12 @@
             this.txtNumber.Location = new System.Drawing.Point(129, 160);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(219, 34);
+            this.txtNumber.Size = new System.Drawing.Size(219, 22);
             this.txtNumber.TabIndex = 10;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(34, 130);
+            this.labelControl3.Location = new System.Drawing.Point(39, 124);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 16);
@@ -153,7 +153,7 @@
             this.txtLastName.Location = new System.Drawing.Point(129, 121);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(219, 34);
+            this.txtLastName.Size = new System.Drawing.Size(219, 22);
             this.txtLastName.TabIndex = 8;
             // 
             // BtnGuncelle
@@ -191,7 +191,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(32, 91);
+            this.labelControl2.Location = new System.Drawing.Point(37, 85);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(67, 16);
@@ -200,7 +200,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(23, 52);
+            this.labelControl1.Location = new System.Drawing.Point(28, 46);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(76, 16);
@@ -212,7 +212,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(129, 82);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(219, 34);
+            this.txtFirstName.Size = new System.Drawing.Size(219, 22);
             this.txtFirstName.TabIndex = 2;
             // 
             // txtID
@@ -221,7 +221,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
             this.txtID.Properties.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(219, 34);
+            this.txtID.Size = new System.Drawing.Size(219, 22);
             this.txtID.TabIndex = 1;
             // 
             // gridControl1

@@ -69,7 +69,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(22, 175);
+            this.labelControl3.Location = new System.Drawing.Point(22, 169);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(79, 16);
@@ -81,7 +81,7 @@
             this.txtPrice.Location = new System.Drawing.Point(116, 166);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(219, 34);
+            this.txtPrice.Size = new System.Drawing.Size(219, 22);
             this.txtPrice.TabIndex = 8;
             // 
             // BtnGuncelle
@@ -119,7 +119,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(17, 123);
+            this.labelControl2.Location = new System.Drawing.Point(17, 116);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(84, 16);
@@ -128,7 +128,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(38, 69);
+            this.labelControl1.Location = new System.Drawing.Point(38, 63);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(63, 16);
@@ -137,10 +137,10 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(116, 114);
+            this.txtName.Location = new System.Drawing.Point(116, 113);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(219, 34);
+            this.txtName.Size = new System.Drawing.Size(219, 22);
             this.txtName.TabIndex = 2;
             // 
             // txtID
@@ -149,7 +149,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
             this.txtID.Properties.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(219, 34);
+            this.txtID.Size = new System.Drawing.Size(219, 22);
             this.txtID.TabIndex = 1;
             // 
             // gridControl1
