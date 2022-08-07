@@ -89,12 +89,12 @@
             this.LueService.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ServiceName", "Service")});
             this.LueService.Properties.Tag = "<Null>";
-            this.LueService.Size = new System.Drawing.Size(219, 34);
+            this.LueService.Size = new System.Drawing.Size(219, 22);
             this.LueService.TabIndex = 28;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(11, 204);
+            this.labelControl4.Location = new System.Drawing.Point(12, 198);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(93, 16);
@@ -109,12 +109,12 @@
             this.txtServiceExPrice.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txtServiceExPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtServiceExPrice.Properties.NullText = "0";
-            this.txtServiceExPrice.Size = new System.Drawing.Size(219, 34);
+            this.txtServiceExPrice.Size = new System.Drawing.Size(219, 22);
             this.txtServiceExPrice.TabIndex = 26;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(50, 110);
+            this.labelControl6.Location = new System.Drawing.Point(51, 104);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(54, 16);
@@ -131,13 +131,13 @@
             this.LueEmployee.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Personel", "Personel")});
             this.LueEmployee.Properties.Tag = "<Null>";
-            this.LueEmployee.Size = new System.Drawing.Size(219, 34);
+            this.LueEmployee.Size = new System.Drawing.Size(219, 22);
             this.LueEmployee.TabIndex = 24;
             this.LueEmployee.TextChanged += new System.EventHandler(this.LueEmployee_TextChanged);
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(57, 251);
+            this.labelControl9.Location = new System.Drawing.Point(58, 245);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(47, 16);
@@ -154,12 +154,12 @@
             this.LueCustomer.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Musteri", "Musteri")});
             this.LueCustomer.Properties.Tag = "<Null>";
-            this.LueCustomer.Size = new System.Drawing.Size(219, 34);
+            this.LueCustomer.Size = new System.Drawing.Size(219, 22);
             this.LueCustomer.TabIndex = 19;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(57, 157);
+            this.labelControl3.Location = new System.Drawing.Point(58, 151);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(47, 16);
@@ -209,7 +209,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(41, 63);
+            this.labelControl1.Location = new System.Drawing.Point(42, 57);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(63, 16);
@@ -222,7 +222,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
             this.txtID.Properties.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(219, 34);
+            this.txtID.Size = new System.Drawing.Size(219, 22);
             this.txtID.TabIndex = 1;
             // 
             // gridControl1

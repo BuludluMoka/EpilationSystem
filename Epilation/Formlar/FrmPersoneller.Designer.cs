@@ -116,7 +116,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(58, 362);
+            this.labelControl9.Location = new System.Drawing.Point(59, 356);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(42, 16);
@@ -128,12 +128,12 @@
             this.txtSalary.Location = new System.Drawing.Point(125, 308);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(219, 34);
+            this.txtSalary.Size = new System.Drawing.Size(219, 22);
             this.txtSalary.TabIndex = 22;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(59, 317);
+            this.labelControl8.Location = new System.Drawing.Point(60, 311);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(41, 16);
@@ -145,7 +145,7 @@
             this.txtJobDesc.Location = new System.Drawing.Point(125, 263);
             this.txtJobDesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobDesc.Name = "txtJobDesc";
-            this.txtJobDesc.Size = new System.Drawing.Size(219, 34);
+            this.txtJobDesc.Size = new System.Drawing.Size(219, 22);
             this.txtJobDesc.TabIndex = 20;
             // 
             // lookUpEdit1
@@ -158,12 +158,12 @@
             this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ServiceName", "Service Name")});
             this.lookUpEdit1.Properties.Tag = "<Null>";
-            this.lookUpEdit1.Size = new System.Drawing.Size(219, 34);
+            this.lookUpEdit1.Size = new System.Drawing.Size(219, 22);
             this.lookUpEdit1.TabIndex = 19;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(43, 272);
+            this.labelControl7.Location = new System.Drawing.Point(44, 266);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(55, 16);
@@ -172,7 +172,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(60, 227);
+            this.labelControl5.Location = new System.Drawing.Point(61, 221);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(40, 16);
@@ -184,12 +184,12 @@
             this.txtStreet.Location = new System.Drawing.Point(125, 218);
             this.txtStreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStreet.Name = "txtStreet";
-            this.txtStreet.Size = new System.Drawing.Size(219, 34);
+            this.txtStreet.Size = new System.Drawing.Size(219, 22);
             this.txtStreet.TabIndex = 12;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(56, 182);
+            this.labelControl4.Location = new System.Drawing.Point(57, 176);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(44, 16);
@@ -201,12 +201,12 @@
             this.txtNumber.Location = new System.Drawing.Point(125, 173);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(219, 34);
+            this.txtNumber.Size = new System.Drawing.Size(219, 22);
             this.txtNumber.TabIndex = 10;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(35, 137);
+            this.labelControl3.Location = new System.Drawing.Point(36, 131);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 16);
@@ -218,7 +218,7 @@
             this.txtLastName.Location = new System.Drawing.Point(125, 128);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(219, 34);
+            this.txtLastName.Size = new System.Drawing.Size(219, 22);
             this.txtLastName.TabIndex = 8;
             // 
             // BtnGuncelle
@@ -256,7 +256,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(33, 92);
+            this.labelControl2.Location = new System.Drawing.Point(34, 86);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(67, 16);
@@ -265,7 +265,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(30, 47);
+            this.labelControl1.Location = new System.Drawing.Point(31, 41);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(70, 16);
@@ -277,7 +277,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(125, 83);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(219, 34);
+            this.txtFirstName.Size = new System.Drawing.Size(219, 22);
             this.txtFirstName.TabIndex = 2;
             // 
             // txtID
@@ -286,7 +286,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
             this.txtID.Properties.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(219, 34);
+            this.txtID.Size = new System.Drawing.Size(219, 22);
             this.txtID.TabIndex = 1;
             // 
             // FrmPersoneller
